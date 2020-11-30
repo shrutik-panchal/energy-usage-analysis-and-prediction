@@ -59,13 +59,19 @@ Based on the histogram and density diagram above, it is visible that the data is
 Here, transformations are applied to all the variables however X1, X2, X3 and X4 will be used with Variable Y for the further analysis.
 
 Variable X1: As data is slightly right skewed, Log transformation has been used.
+
 Variable X2: As data is slightly right skewed, Log transformation has been used.
+
 Variable X3: There are negative values in data hence rescaled them using “value + 1 – minimum (column)” then applied power transformation with power 1.5 (getting as close as possible to normal distribution).
+
 Variable X4: As data is slightly left skewed, Power transformation has been used with power 2 (Square Transformation).
+
 Variable X5: As data is negatively skewed, Power Transformation has been used with power 3 (Cube Transformation).
+
 Variable Y: As data has high right skewness, first log transformation has been used and later, power transformation with power 0.001 (as there was no any significant difference by decreasing the value more) has been applied.
 
-After the transformation applied, data were normalized using formula: 
+After the transformation applied, data were normalized using formula:
+
 (Data Column – minimum (Data Column)) / (maximum (Data Column) – minimum (Data Column))
 
 Summary of the variables after the transformations and normalization:
@@ -73,6 +79,7 @@ Summary of the variables after the transformations and normalization:
 ![Graph-8](/Images/T2Summ.png)
 
 Only X1, X2, X3, X4 and Y will be used in further analysis.
+
 For Pearson Skewness Calculation following alternate formula has been used:
 Formula: (3 * (Mean (Data Column) – Median (Data Column))) / (standard deviation (Data Column))
 
