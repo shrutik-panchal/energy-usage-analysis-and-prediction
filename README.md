@@ -70,9 +70,7 @@ Variable X5: As data is negatively skewed, Power Transformation has been used wi
 
 Variable Y: As data has high right skewness, first log transformation has been used and later, power transformation with power 0.001 (as there was no any significant difference by decreasing the value more) has been applied.
 
-After the transformation applied, data were normalized using formula:
-
-(Data Column – minimum (Data Column)) / (maximum (Data Column) – minimum (Data Column))
+After the transformation applied, data were normalized using formula: (Data Column – minimum (Data Column)) / (maximum (Data Column) – minimum (Data Column))
 
 Summary of the variables after the transformations and normalization:
 
@@ -80,8 +78,27 @@ Summary of the variables after the transformations and normalization:
 
 Only X1, X2, X3, X4 and Y will be used in further analysis.
 
-For Pearson Skewness Calculation following alternate formula has been used:
-Formula: (3 * (Mean (Data Column) – Median (Data Column))) / (standard deviation (Data Column))
+For Pearson Skewness Calculation alternate formula has been used: Formula: (3 * (Mean (Data Column) – Median (Data Column))) / (standard deviation (Data Column))
 
+
+## Task 3: Model Building and Importance of Each Variable
+
+#### Table 1: Summary - Error Measures and Correlation Coefficients
+![Graph-9](/Images/T3T1.png)
+
+#### Table 2: Summary - Weights and Parameters
+![Graph-10](/Images/T3T2.png)
+
+As per the table 1, it is clearly visible that Choquet performs the best in the given scenario comparted to other fitting functions. Choquet has the lowest error measure values for Root Mean Square Error as well as Average Absolute Error though model is least accurate with Weighted Power Mean where p=0.5. OWA seems to perform better than WAM and WPM functions though there is noticeable difference between Choquet accuracy and OWA. Pearson and Spearman correlation values are far better with Choquet fitting compared to other functions though it shows significant difference where other functions have Correlation below 0.5, Choquet function has Pearson and Spearman correlation values greater than 0.5 that shows high positive relationship.
+
+As per the table 2, it is noticeable that all the fitting functions assign different weights to different attributes however if we compare our scatter plot diagrams (from task 1) to this weights assigned, Choquet function seem to be doing better job applying respected weights to attributes as X3 has high positive regression with Y hence logically it should be given higher weights and following it X1 should receive the second highest weight. Compared to this, other fitting functions doesn’t seem to provide sensible outputs/weights to attributes.
+
+X3 and X1 covers more than 70 percent of weightage according to Choquet function. As per the Choquet fuzzy measures below, we can say that there are nearly 4 measures with value as 1.
+
+As per the fuzzy measures collected with Choquet function,
+X1 and X2 are additive however relationship with other variable relations such as X1 to X3, X1 to X4, X2 to X3, X2 to X4 and X3 to X4 are somewhat redundant.
+Orness score for Choquet and OWA is 0.753750530061303 and 0.678134436983788 respectively hence our model favours the higher inputs as both the scores are higher than 0.5.
+
+![Graph-11](/Images/T3CFM.png)
 
 
