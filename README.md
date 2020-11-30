@@ -102,7 +102,7 @@ Orness score for Choquet and OWA is 0.753750530061303 and 0.678134436983788 resp
 
 ## Task 4: Model Prediction
 In this task:
-- Using best fitting model, prediction of the Energy usage of appliances for the input X1=18; X2=44; X3=4; X4=74.8; X5=31.4. [R Program](/Program/Program.R)
+- Using best fitting model, prediction of the Energy usage of appliances for the input X1=18; X2=44; X3=4; X4=74.8; X5=31.4. [(R Program)](/Program/Program.R)
 - Best conditions for a low energy usage of appliances will occur.
 
 
